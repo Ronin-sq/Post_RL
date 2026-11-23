@@ -1,0 +1,30 @@
+<mujocoinclude>
+  <!--
+    方孔插槽：外形 100×100 mm，孔口 54×54 mm，孔深 25 mm，底板厚 10 mm。
+    适配 50 mm 方块，单侧间隙 2 mm。四面孔壁分别建模，保留真实空腔。
+    body 原点位于底板下表面；装到底后的方块中心为 socket_target。
+  -->
+  <body name="socket" pos="0.25 -0.16 0.75">
+    <geom name="socket_floor" type="box" pos="0 0 0.005" size="0.05 0.05 0.005"
+          rgba="0.14 0.18 0.23 1" friction="0.8 0.005 0.0001"
+          priority="1" solref="0.004 1" solimp="0.95 0.99 0.001"/>
+
+    <!-- X 两侧孔壁覆盖整个 Y 方向；Y 两侧填充其间，孔口半宽为 0.027 m。 -->
+    <geom name="socket_wall_x_positive" type="box" pos="0.0385 0 0.0225"
+          size="0.0115 0.05 0.0125" rgba="0.12 0.35 0.65 1"
+          friction="0.8 0.005 0.0001" priority="1" solref="0.004 1" solimp="0.95 0.99 0.001"/>
+    <geom name="socket_wall_x_negative" type="box" pos="-0.0385 0 0.0225"
+          size="0.0115 0.05 0.0125" rgba="0.12 0.35 0.65 1"
+          friction="0.8 0.005 0.0001" priority="1" solref="0.004 1" solimp="0.95 0.99 0.001"/>
+    <geom name="socket_wall_y_positive" type="box" pos="0 0.0385 0.0225"
+          size="0.027 0.0115 0.0125" rgba="0.12 0.35 0.65 1"
+          friction="0.8 0.005 0.0001" priority="1" solref="0.004 1" solimp="0.95 0.99 0.001"/>
+    <geom name="socket_wall_y_negative" type="box" pos="0 -0.0385 0.0225"
+          size="0.027 0.0115 0.0125" rgba="0.12 0.35 0.65 1"
+          friction="0.8 0.005 0.0001" priority="1" solref="0.004 1" solimp="0.95 0.99 0.001"/>
+
+    <!-- 供后续数据采集与插入成功判定使用；group=5 默认不显示标记。 -->
+    <site name="socket_bottom" pos="0 0 0.01" size="0.002" group="5" rgba="0.2 0.8 0.3 0.5"/>
+    <site name="socket_target" pos="0 0 0.035" size="0.003" group="5" rgba="0.2 0.8 0.3 0.5"/>
+  </body>
+</mujocoinclude>

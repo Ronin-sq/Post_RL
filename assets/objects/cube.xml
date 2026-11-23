@@ -1,0 +1,9 @@
+<mujocoinclude>
+  <!-- 方块边长 5 厘米、质量 100 克；中心高度使底面与桌面 z=0.75 齐平。 -->
+  <body name="cube" pos="0.2 0.05 0.775">
+    <freejoint name="cube_free_joint"/>
+    <geom name="cube_geom" type="box" size="0.025 0.025 0.025"
+          mass="0.1" rgba="0.85 0.15 0.12 1" friction="0.8 0.005 0.0001"
+          priority="1" solref="0.004 1" solimp="0.95 0.99 0.001"/>
+  </body>
+</mujocoinclude>

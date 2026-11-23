@@ -1,0 +1,28 @@
+<mujocoinclude>
+  <!-- 单位为米；body 原点位于桌面上表面中心，桌子固定在世界中。 -->
+  <body name="table" pos="0 0 0.75">
+    <!-- box 的 size 为半尺寸：桌面实际尺寸为 1.2 × 0.8 × 0.05。 -->
+    <geom name="table_top" type="box" pos="0 0 -0.025"
+          size="0.6 0.4 0.025" rgba="0.68 0.52 0.35 1"
+          friction="0.8 0.005 0.0001"/>
+
+    <!-- 桌腿高 0.70 米，底部与 z=0 的地面齐平。 -->
+    <geom name="table_leg_front_left" type="box" pos="-0.53 -0.33 -0.4"
+          size="0.03 0.03 0.35" rgba="0.20 0.23 0.27 1"/>
+    <geom name="table_leg_front_right" type="box" pos="0.53 -0.33 -0.4"
+          size="0.03 0.03 0.35" rgba="0.20 0.23 0.27 1"/>
+    <geom name="table_leg_back_left" type="box" pos="-0.53 0.33 -0.4"
+          size="0.03 0.03 0.35" rgba="0.20 0.23 0.27 1"/>
+    <geom name="table_leg_back_right" type="box" pos="0.53 0.33 -0.4"
+          size="0.03 0.03 0.35" rgba="0.20 0.23 0.27 1"/>
+
+    <geom name="table_rail_front" type="box" pos="0 -0.33 -0.08"
+          size="0.5 0.02 0.03" rgba="0.20 0.23 0.27 1"/>
+    <geom name="table_rail_back" type="box" pos="0 0.33 -0.08"
+          size="0.5 0.02 0.03" rgba="0.20 0.23 0.27 1"/>
+    <geom name="table_rail_left" type="box" pos="-0.53 0 -0.08"
+          size="0.02 0.3 0.03" rgba="0.20 0.23 0.27 1"/>
+    <geom name="table_rail_right" type="box" pos="0.53 0 -0.08"
+          size="0.02 0.3 0.03" rgba="0.20 0.23 0.27 1"/>
+  </body>
+</mujocoinclude>
